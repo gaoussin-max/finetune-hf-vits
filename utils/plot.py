@@ -11,11 +11,11 @@ def plot_spectrogram_to_numpy(spectrogram):
     global MATPLOTLIB_FLAG
     if not MATPLOTLIB_FLAG:
         import matplotlib
-
         matplotlib.use("Agg")
         MATPLOTLIB_FLAG = True
         mpl_logger = logging.getLogger("matplotlib")
         mpl_logger.setLevel(logging.WARNING)
+    
     import matplotlib.pylab as plt
     import numpy as np
 
@@ -27,8 +27,15 @@ def plot_spectrogram_to_numpy(spectrogram):
     plt.tight_layout()
 
     fig.canvas.draw()
-    data = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
-    data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    
+    # FIX START: Use buffer_rgba instead of tostring_rgb
+    # We slice [:, :, :3] to drop the Alpha channel and keep it RGB
+    rgba_buffer = fig.canvas.buffer_rgba()
+    data = np.frombuffer(rgba_buffer, dtype=np.uint8)
+    data = data.reshape(fig.canvas.get_width_height()[::-1] + (4,))
+    data = data[:, :, :3] 
+    # FIX END
+
     plt.close()
     return data
 
