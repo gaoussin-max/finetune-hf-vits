@@ -1,7 +1,13 @@
-transformers>=4.35.1
+transformers==4.35.1
 datasets[audio]>=2.14.7
 accelerate>=0.24.1
+numpy<2.0
 matplotlib
 wandb
 tensorboard
 Cython
+
+
+
+!pip install "numpy<2.0"
+!pip install  datasets[audio]==2.14.7 accelerate==0.24.1
