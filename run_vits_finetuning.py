@@ -700,7 +700,13 @@ def main():
             raw_datasets["train"] = raw_datasets["train"].select(range(data_args.max_train_samples))
 
         if data_args.max_eval_samples is not None:
-            raw_datasets["eval"] = raw_datasets["eval"].select(range(data_args.max_eval_samples))
+            #raw_datasets["eval"] = raw_datasets["eval"].select(range(data_args.max_eval_samples))
+            ####
+            # Calculate the safe maximum
+            safe_eval_samples = min(data_args.max_eval_samples, len(raw_datasets["eval"]))
+            # Select the samples
+            raw_datasets["eval"] = raw_datasets["eval"].select(range(safe_eval_samples))
+            ####
 
     speaker_id_dict = {}
     new_num_speakers = 0
