@@ -6,8 +6,3 @@ matplotlib
 wandb
 tensorboard
 Cython
-
-
-
-!pip install "numpy<2.0"
-!pip install  datasets[audio]==2.14.7 accelerate==0.24.1
