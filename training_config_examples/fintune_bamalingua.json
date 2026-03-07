@@ -12,7 +12,7 @@
     "train_split_name": "train",
     "eval_split_name": "test",
     "override_speaker_embeddings": true,
-
+    "override_vocabulary_embeddings": true,
     "full_generation_sample_text": "Ne be tâ so n ka sö la sisan.",
     
     "max_duration_in_seconds": 20,
