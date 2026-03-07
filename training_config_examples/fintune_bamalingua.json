@@ -4,7 +4,7 @@
     "hub_model_id": "Gaoussin/bamalingua_vits_finetuned",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
-    "output_dir": "/kagle/working/bamalingua_vits_finetuned",
+    "output_dir": "/kaggle/working/bamalingua_vits_finetuned",
 
     "dataset_name": "Gaoussin/bamalingua-male",    
     "audio_column_name": "audio", 
@@ -19,7 +19,7 @@
     "min_duration_in_seconds": 0.2,
     "max_tokens_length": 500,
 
-    "model_name_or_path": "/kagle/working/bamalingua",
+    "model_name_or_path": "/kaggle/working/bamalingua",
 
 
     "preprocessing_num_workers": 4,
