@@ -36,7 +36,7 @@
     "group_by_length": false,
 
     "do_eval": true, 
-    "eval_steps": 50,
+    "eval_steps": 200,
     "per_device_eval_batch_size": 16,
     "max_eval_samples": 25, 
     "do_step_schedule_per_epoch": true,
