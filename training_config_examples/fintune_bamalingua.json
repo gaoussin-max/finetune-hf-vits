@@ -21,7 +21,6 @@
 
     "model_name_or_path": "/kaggle/working/bamalingua",
 
-
     "preprocessing_num_workers": 4,
 
     "do_train": true,
@@ -34,6 +33,7 @@
     "adam_beta2": 0.99,
     "warmup_ratio": 0.01,
     "group_by_length": false,
+    "save_total_limit": 1,
 
     "do_eval": true, 
     "eval_steps": 200,
