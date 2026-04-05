@@ -36,14 +36,14 @@
 
     "evaluation_strategy": "steps",
     "save_strategy": "steps",
-    "save_steps": 200,
+    "save_steps": 500,
     "load_best_model_at_end": true,
     "metric_for_best_model": "eval_loss",
     "greater_is_better": false,
     "save_total_limit": 1,
 
     "do_eval": true, 
-    "eval_steps": 200,
+    "eval_steps": 500,
     "per_device_eval_batch_size": 16,
     "max_eval_samples": 20, 
     "do_step_schedule_per_epoch": true,
