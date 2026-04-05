@@ -13,10 +13,10 @@
     "eval_split_name": "test",
     "override_speaker_embeddings": true,
     "override_vocabulary_embeddings": true,
-    "full_generation_sample_text": "Ne be taa so n ka so la sisan. I ka kɛnɛ wa? A bɛ taa dugu la.",
+    "full_generation_sample_text": "Ne be taa so sisan. I ka kɛnɛ wa? A bɛ taa dugu la.",
     
     "max_duration_in_seconds": 20,
-    "min_duration_in_seconds": 0.5,
+    "min_duration_in_seconds": 1.0,
     "max_tokens_length": 500,
 
     "model_name_or_path": "/kaggle/working/bamalingua",
@@ -28,7 +28,7 @@
     "gradient_accumulation_steps": 1,
     "gradient_checkpointing": false,
     "per_device_train_batch_size": 16,
-    "learning_rate": 1e-5,
+    "learning_rate": 2e-5,
     "adam_beta1": 0.8,
     "adam_beta2": 0.99,
     "warmup_ratio": 0.01,
@@ -49,11 +49,11 @@
     "do_step_schedule_per_epoch": true,
 
     "weight_disc": 3,
-    "weight_fmaps": 2,
-    "weight_gen": 1.5,
+    "weight_fmaps": 1,
+    "weight_gen": 1,
     "weight_kl": 1.5,
-    "weight_duration": 1,
-    "weight_mel": 20,
+    "weight_duration": 2.5,
+    "weight_mel": 35,
 
     "fp16": true,
     "seed": 456

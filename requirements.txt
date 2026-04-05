@@ -1,7 +1,6 @@
-transformers==4.35.1
-datasets[audio]>=2.14.7
-accelerate>=0.24.1
-numpy<2.0
+!pip uninstall -y transformers datasets accelerate
+!pip install "numpy<2.0"
+!pip install transformers==4.35.1 datasets[audio]==2.14.7 accelerate==0.24.1
 matplotlib
 wandb
 tensorboard
