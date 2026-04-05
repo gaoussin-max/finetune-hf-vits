@@ -45,7 +45,7 @@
     "do_eval": true, 
     "eval_steps": 200,
     "per_device_eval_batch_size": 16,
-    "max_eval_samples": 100, 
+    "max_eval_samples": 20, 
     "do_step_schedule_per_epoch": true,
 
     "weight_disc": 3,
