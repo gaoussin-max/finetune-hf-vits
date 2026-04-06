@@ -1495,27 +1495,6 @@ def main():
 
     logger.info("***** Training / Inference Done *****")
 
-### my own funcs
-from transformers import pipeline
-import scipy.io.wavfile
-from IPython.display import Audio, display
-
-
-# 1. Initialize the pipeline
-# Replace 'your-username/vits-mms-1b-french' with your actual Hub ID
-model_id = "/kaggle/working/bamalingua_vits_finetuned"
-synthesiser2 = pipeline("text-to-speech", model=model_id, device=0 if torch.cuda.is_available() else -1)
-
-# 2. Define your French text
-text_to_speak = "Ne tɔgɔ ye Oussou ye, wa n jamu ye maïga ye; ne be taa so. "#"Bonjour ! J'apprends le français avec mon propre modèle d'intelligence artificielle."
-
-# 3. Generate the audio
-output = synthesiser2(text_to_speak)
-
-# 4. Save the result as a .wav file
-scipy.io.wavfile.write("test_output.wav", rate=output["sampling_rate"], data=output["audio"][0])
-display(Audio("test_output.wav", autoplay=True))
-print("Audio saved as test_output.wav")
 
 
 if __name__ == "__main__":
